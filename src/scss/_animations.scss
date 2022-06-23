@@ -1,0 +1,26 @@
+@keyframes buttonAnimation {
+  from {
+    top: 25%;
+  }
+  50% {
+    top: 45%;
+  }
+  to {
+    top: 25%;
+  }
+}
+
+@keyframes arrowAnimation {
+  from {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  to {
+    opacity: 0%;
+  }
+}

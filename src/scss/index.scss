@@ -1,3 +1,11 @@
-@import './globals.scss';
-@import './variables.scss';
-@import './mixins.scss';
+//Configurations
+@import 'variables';
+@import 'globals';
+@import 'mixins';
+
+//Styles
+@import 'firstLook';
+@import 'aboutMe';
+
+//Animations
+@import 'animations';
