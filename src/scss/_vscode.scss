@@ -1,0 +1,197 @@
+.vsCodeContainer {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #1a1b22;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Fira Code', monospace;
+
+  ::selection {
+    color: inherit;
+    background-color: rgba($white, 0.1);
+  }
+
+  .header {
+    position: relative;
+    height: 1.5rem;
+    padding: 0.2rem;
+    padding-right: 0.75rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: $white;
+    font-size: 0.8rem;
+    background-color: #282a36;
+
+    @media (min-width: 25em) {
+      justify-content: center;
+      padding-right: 0.2rem;
+    }
+
+    .buttons {
+      display: flex;
+      position: absolute;
+      left: 0.75rem;
+
+      .button {
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background-color: white;
+        cursor: pointer;
+
+        &:not(:first-child) {
+          margin-left: 0.5rem;
+        }
+      }
+
+      //Button Colors
+      .red {
+        background-color: #ff605c;
+      }
+      .yellow {
+        background-color: #ffbd44;
+      }
+      .green {
+        background-color: #00ca4e;
+      }
+    }
+  }
+
+  .editor {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: calc(100% - 1.5rem);
+    padding-left: 3.5rem;
+
+    .rightMenu {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 3.5rem;
+      background-color: #343746;
+      display: block;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #475a90;
+
+      i {
+        display: block;
+        height: 3.5rem;
+        border-left: 4px solid transparent;
+
+        &::before {
+          margin-left: -4px;
+        }
+
+        &:not(:first-child) {
+          height: calc(3.5rem + 1px);
+        }
+        width: 100%;
+        line-height: calc(3.5rem + 1px);
+
+        &:hover {
+          background-color: #3c3d51;
+          color: $white;
+          border-left: 4px solid #ff79c6;
+        }
+      }
+    }
+
+    .files {
+      display: flex;
+      width: 100%;
+      height: 2.5rem;
+
+      .file {
+        height: 100%;
+        border-top: 1px solid #ff79c6;
+        line-height: calc(2.5rem - 1px);
+        padding: 0 0.8rem;
+        font-size: 0.8rem;
+        background-color: #282a36;
+        color: #5cbfd5;
+        z-index: 50;
+      }
+
+      .fa-user {
+        margin-right: 0.5rem;
+        color: #5c64d5;
+      }
+      .fa-close {
+        margin-left: 0.5rem;
+        color: #606169;
+      }
+    }
+
+    .filesDescription {
+      z-index: 25;
+      height: 1rem;
+      width: 100%;
+      background-color: #282a36;
+      box-shadow: 2px 2px 10px 0.5px rgba(#000000, 0.4);
+      color: #455a85;
+      font-size: 0.8rem;
+      line-height: 1rem;
+      padding: 0 0.25rem;
+      white-space: nowrap;
+    }
+
+    .editorText {
+      height: calc(100% - 3.5rem);
+      background-color: #282a36;
+      line-height: 3.5rem;
+      //margin-bottom: 1rem;
+
+      a {
+        display: block;
+        text-decoration: none;
+        &:last-child {
+          margin-bottom: 1rem;
+        }
+
+        p {
+          color: #d75c9c;
+          border-bottom: 1px solid #4b5078;
+
+          &:hover {
+            background-color: rgba($white, 0.1);
+          }
+
+          .line {
+            color: #4b5078;
+            margin-right: 1rem;
+            margin-left: 0.5rem;
+          }
+
+          .text {
+            //Only pc n' tablet
+            color: $white;
+          }
+
+          .openCloseTag {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    background-color: #191a21;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: $white;
+    padding: 0 0.5rem;
+  }
+}

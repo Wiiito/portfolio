@@ -28,3 +28,15 @@ body {
 .tag {
   font-family: 'Fira Code', monospace;
 }
+
+.flex {
+  display: flex;
+}
+
+.notMobile {
+  display: none;
+
+  @include breakpoint-up(medium) {
+    display: inline;
+  }
+}

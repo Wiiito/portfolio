@@ -1,14 +1,19 @@
+.me {
+  display: flex;
+  flex-wrap: wrap;
+
+  h2 {
+    font-family: 'Roboto Condensed', cursive;
+  }
+}
+
+//About me section
 .aboutMe {
-  min-height: 100vh;
   width: 100%;
   padding: 3rem 2rem;
 
   @include breakpoint-up(large) {
-    max-width: calc(50vw - 4rem);
-  }
-
-  h2 {
-    font-family: 'Roboto Condensed', cursive;
+    max-width: 50vw;
   }
 
   .meImage {
@@ -41,5 +46,14 @@
       padding-right: 1.5rem;
       text-align: justify;
     }
+  }
+}
+
+//Contact section
+.contact {
+  width: 100%;
+  padding: 3rem 2rem;
+  @include breakpoint-up(large) {
+    max-width: 50vw;
   }
 }
