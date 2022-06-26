@@ -54,7 +54,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   min-width: 50vw;
-  top: 50%;
+  top: 54%;
   left: 50%;
   color: #f2f2f2;
 }
@@ -666,6 +666,43 @@ footer .siteInfo h5 {
 }
 footer input[type=checkbox]:checked ~ .siteInfo {
   min-height: 90vh;
+}
+
+header {
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 75;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  padding: 0 1rem;
+  background-color: rgba(169, 28, 252, 0.5);
+}
+header a {
+  position: relative;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+header a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: #f2f2f2;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+header a:hover::after {
+  width: 100%;
+}
+header a:not(:last-child) {
+  margin-right: 1rem;
+}
+header:hover {
+  background-color: rgba(169, 28, 252, 0.7);
 }
 
 @keyframes buttonAnimation {

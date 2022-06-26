@@ -1,0 +1,43 @@
+header {
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 75;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  padding: 0 1rem;
+  background-color: rgba($dark-purple, 0.5);
+
+  a {
+    position: relative;
+    text-decoration: none;
+    color: $white;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      background-color: $white;
+      transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &:hover {
+    background-color: rgba($dark-purple, 0.7);
+  }
+}
