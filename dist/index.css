@@ -581,6 +581,43 @@ body {
   max-height: 12.5rem;
 }
 
+.future {
+  width: 100%;
+  padding: 3rem 2rem;
+}
+.future .meImage {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.future .meImage img {
+  position: relative;
+  margin-left: 0.5rem;
+  width: calc(100% - 3rem);
+}
+@media (min-width: 64em) {
+  .future .meImage img {
+    max-width: 50vw;
+  }
+}
+.future .meImage .subtitle {
+  font-style: italic;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+.future .text {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.future .text p {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-right: 1.5rem;
+  text-align: justify;
+}
+
 @keyframes buttonAnimation {
   from {
     top: 25%;
