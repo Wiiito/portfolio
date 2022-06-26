@@ -71,11 +71,32 @@ body {
   font-size: 2rem;
   line-height: 2rem;
 }
+.hero .middle .name h1 span {
+  position: relative;
+  cursor: default;
+}
+.hero .middle .name h1 span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f2f2f2;
+  transition: 0.4s ease-in-out;
+}
+.hero .middle .name h1 span:hover::after {
+  width: 100%;
+}
 .hero .middle .subtitle {
   margin-top: 0.5rem;
   text-transform: capitalize;
   letter-spacing: 1vw;
   font-size: 1.4rem;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+.hero .middle .subtitle:hover {
+  letter-spacing: 1.05vw;
 }
 .hero .middle .subtitle .joke {
   text-transform: lowercase;
@@ -83,6 +104,10 @@ body {
   letter-spacing: 0.5vw;
   color: #aaaaaa;
   font-style: italic;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+.hero .middle .subtitle .joke:hover {
+  letter-spacing: 0.52vw;
 }
 .hero .links {
   margin-top: 4rem;
@@ -406,6 +431,7 @@ body {
 
 .projects {
   margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 .projects h2 {
   text-align: center;
@@ -478,6 +504,81 @@ body {
   text-decoration: none;
   color: #f2f2f2;
   text-align: center;
+  transition: 0.15s ease-in-out;
+}
+.projects .container .text a:hover {
+  background-color: rgba(103, 27, 242, 0.8);
+}
+
+.skills {
+  margin-top: 2rem;
+  width: 100vw;
+  padding-bottom: 2rem;
+}
+@media (min-width: 40em) {
+  .skills {
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+  }
+}
+.skills h2 {
+  font-family: "Roboto Condensed", cursive;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.skills .dropDown {
+  line-height: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+.skills .dropDown input {
+  display: none;
+}
+.skills .dropDown ul {
+  position: relative;
+  width: 100%;
+  background-color: #121212;
+  color: #f2f2f2;
+  padding: 0 0.75rem;
+  list-style: none;
+  overflow: hidden;
+}
+.skills .dropDown ul li {
+  position: relative;
+}
+.skills .dropDown ul li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: calc(2.5rem - 8px);
+  background-color: #f2f2f2;
+  border-radius: 1px;
+}
+.skills .dropDown ul li::after {
+  content: "";
+  position: absolute;
+  width: var(--skillKnowledge, 0px);
+  background-color: var(--skillAfterBackColor, #f21b42);
+  height: 2px;
+  left: 0;
+  top: calc(2.5rem - 8px);
+  border-radius: 1px;
+}
+.skills .dropDown ul label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.skills .dropDown ul ul {
+  max-height: 0;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1.25s;
+}
+.skills .dropDown ul input[name=skills]:checked ~ ul {
+  visibility: visible;
+  max-height: 12.5rem;
 }
 
 @keyframes buttonAnimation {

@@ -1,0 +1,81 @@
+.skills {
+  margin-top: 2rem;
+  width: 100vw;
+  padding-bottom: 2rem;
+
+  @include breakpoint-up(medium) {
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+  }
+
+  h2 {
+    font-family: 'Roboto Condensed', cursive;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .dropDown {
+    line-height: 2.5rem;
+    display: flex;
+    justify-content: center;
+
+    input {
+      display: none;
+    }
+
+    ul {
+      position: relative;
+      width: 100%;
+      background-color: $black;
+      color: $white;
+      padding: 0 0.75rem;
+      list-style: none;
+      overflow: hidden;
+
+      li {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          left: 0;
+          top: calc(2.5rem - 8px);
+          background-color: $white;
+          border-radius: 1px;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: var(--skillKnowledge, 0px);
+          background-color: var(--skillAfterBackColor, $red);
+          height: 2px;
+          left: 0;
+          top: calc(2.5rem - 8px);
+          border-radius: 1px;
+        }
+      }
+
+      label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        //padding: 0 0.5rem;
+      }
+
+      ul {
+        max-height: 0;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1.25s;
+      }
+
+      input[name='skills']:checked ~ ul {
+        //display: block;
+        visibility: visible;
+        max-height: 12.5rem;
+      }
+    }
+  }
+}

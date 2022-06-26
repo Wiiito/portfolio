@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#121212" />
+    <meta name="theme-color" content="#000000" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +25,12 @@
     <!-- First look at the website -->
     <section class="hero">
       <div class="middle">
-        <div class="name"><h1>Flávio Saldanha</h1></div>
+        <div class="name">
+          <h1>
+            <span>Flávio</span>
+            <span>Saldanha</span>
+          </h1>
+        </div>
         <div class="subtitle">
           A web developer
           <div class="joke">as you can see</div>
@@ -77,9 +82,8 @@
           </p>
           <p>
             &nbsp;&nbsp; My focus for some time now has been web development, I
-            want to delve deeper and deeper into javascript ❤, both in front-end
-            and back-end with node.js. Também utilizo outras liguanges de vez em
-            quando, como python🐍.
+            want to delve deeper and deeper into it, both in front-end and
+            back-end.
           </p>
           <div class="tag">&lt;/p&gt;</div>
         </div>
@@ -206,6 +210,7 @@
         </div>
       </section>
     </div>
+    <!-- Projects -->
     <section class="projects">
       <h2>&lt;MyProjects /&gt;</h2>
       <div class="container">
@@ -282,7 +287,69 @@
         </div>
       </div>
     </section>
+    <section class="skills">
+      <h2>&lt;MySkills /&gt;</h2>
+      <div class="dropDown">
+        <ul>
+          <li data-knowledge="90%">
+            <label for="front">
+              Front-end <i class="fa-solid fa-caret-down"></i>
+            </label>
+            <input type="checkbox" name="skills" id="front" />
+            <ul>
+              <li data-color="#e34c26" data-knowledge="95%">HTML</li>
+              <li data-color="#264de4" data-knowledge="95%">
+                <label for="css"
+                  >CSS <i class="fa-solid fa-caret-down"></i
+                ></label>
+                <input type="checkbox" name="skills" id="css" />
+                <ul>
+                  <li data-color="#f21b42" data-knowledge="80%">SASS</li>
+                  <li data-color="#F0DB4F" data-knowledge="85%">CSS-in-JS</li>
+                </ul>
+              </li>
+              <li data-color="#F0DB4F" data-knowledge="80%">JavaScript</li>
+            </ul>
+          </li>
+          <li data-knowledge="60%">
+            <label for="back"
+              >Back-end <i class="fa-solid fa-caret-down"></i
+            ></label>
+            <input type="checkbox" name="skills" id="back" />
+            <ul>
+              <li data-color="green" data-knowledge="40%">
+                <label for="node"
+                  >Node.JS <i class="fa-solid fa-caret-down"></i
+                ></label>
+                <input type="checkbox" name="skills" id="node" />
+                <ul>
+                  <li data-color="#aaaaaa" data-knowledge="70%">Express</li>
+                </ul>
+              </li>
+              <li data-color="orange" data-knowledge="15%">DJango</li>
+              <li data-knowledge="10%">GraphQL</li>
+            </ul>
+          </li>
+          <li data-color="#61dbfb" data-knowledge="80%">ReactJS</li>
+          <li data-color="#41b883" data-knowledge="5%">Vue.JS (starting)</li>
+          <li data-knowledge="100%">
+            <label for="lang"
+              >Languages <i class="fa-solid fa-caret-down"></i
+            ></label>
+            <input type="checkbox" name="skills" id="lang" />
+            <ul>
+              <li data-color="#e34c26" data-knowledge="95%">HTML</li>
+              <li data-color="#264de4" data-knowledge="95%">CSS</li>
+              <li data-color="#f0db4f" data-knowledge="80%">JavaScript ❤</li>
+              <li data-color="#ffd43b" data-knowledge="40%">Python 🐍</li>
+              <li data-color="#F74C00" data-knowledge="5%">Rust (starting)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="./src/js/mySkillsColorNWidth.js"></script>
     <script src="./src/js/projectsSlider.js"></script>
-    <!-- Slide project info -->
   </body>
 </html>
