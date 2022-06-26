@@ -404,6 +404,82 @@ body {
   padding: 0 0.5rem;
 }
 
+.projects {
+  margin-top: 2rem;
+}
+.projects h2 {
+  text-align: center;
+  font-family: "Roboto Condensed", cursive;
+}
+.projects .container {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin-top: 2rem;
+}
+.projects .container .component {
+  position: relative;
+  width: 100vw;
+  height: 49.3125vw;
+  overflow-x: hidden;
+  border-top: 1px solid #aaaaaa;
+  display: flex;
+}
+@media (min-width: 40em) {
+  .projects .container .component {
+    width: 33.3vw;
+    height: 16.4210625vw;
+  }
+  .projects .container .component:hover .text {
+    right: 0;
+  }
+}
+.projects .container .component .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+}
+.projects .container .component .image img {
+  width: 100%;
+  height: 100%;
+}
+.projects .container .text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: -100%;
+  top: 0;
+  transition: ease-in-out 0.2s;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+.projects .container .text h3 {
+  font-family: "Roboto Condensed", cursive;
+  font-size: 1.5rem;
+}
+.projects .container .text .subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.projects .container .text a {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  min-width: 40%;
+  background-color: #a91cfc;
+  text-decoration: none;
+  color: #f2f2f2;
+  text-align: center;
+}
+
 @keyframes buttonAnimation {
   from {
     top: 25%;

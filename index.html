@@ -70,16 +70,16 @@
         <div class="text">
           <div class="tag">&lt;p&gt;</div>
           <p>
-            &nbsp;&nbsp;Est minim ad id ipsum duis enim. Est mollit incididunt
-            incididunt duis. Deserunt do sunt eu anim ea pariatur amet pariatur
-            adipisicing deserunt in et nulla. Sint sit aliquip veniam do
-            incididunt culpa.
+            &nbsp;&nbsp;Hi! My name is Flávio Henrique. I'm 16yo, I'm a coder,
+            and well... right now you are in one of my little experiments. I
+            code since 11yo, back then, it was already my passion. I really
+            don't plan on stopping.
           </p>
           <p>
-            &nbsp;&nbsp;Duis veniam quis occaecat minim exercitation. Sit ut
-            occaecat ut sunt cupidatat occaecat ea. Dolor esse voluptate eiusmod
-            ipsum ex ipsum cupidatat anim esse incididunt mollit reprehenderit
-            do laboris.
+            &nbsp;&nbsp; My focus for some time now has been web development, I
+            want to delve deeper and deeper into javascript ❤, both in front-end
+            and back-end with node.js. Também utilizo outras liguanges de vez em
+            quando, como python🐍.
           </p>
           <div class="tag">&lt;/p&gt;</div>
         </div>
@@ -206,5 +206,83 @@
         </div>
       </section>
     </div>
+    <section class="projects">
+      <h2>&lt;MyProjects /&gt;</h2>
+      <div class="container">
+        <div
+          class="project-component component wip"
+          onclick="handleProjectClick(0)"
+        >
+          <div class="image">
+            <img src="./src/imgs/projects/coffeTrip.png" alt="" srcset="" />
+          </div>
+          <div class="text">
+            <h3>CoffeTrip</h3>
+            <div class="subtitle">A package builder website</div>
+            <a href="#">Work in progress</a>
+          </div>
+        </div>
+        <div
+          class="project-component component"
+          onclick="handleProjectClick(1)"
+        >
+          <div class="image">
+            <img src="./src/imgs/projects/comingSoon.png" alt="" srcset="" />
+          </div>
+          <div class="text">
+            <h3>ComingSoon</h3>
+            <div class="subtitle">A coming soon page</div>
+            <a href="https://comingsoon-orpin.vercel.app">Visit</a>
+          </div>
+        </div>
+        <div
+          class="project-component component"
+          onclick="handleProjectClick(2)"
+        >
+          <div class="image">
+            <img src="./src/imgs/projects/crowdfund.png" alt="" srcset="" />
+          </div>
+          <div class="text">
+            <h3>Crowdfund</h3>
+            <div class="subtitle">A crowdfunding website</div>
+            <a href="https://crowd-funding-tau.vercel.app">Visit</a>
+          </div>
+        </div>
+        <div
+          class="project-component component wip"
+          onclick="handleProjectClick(3)"
+        >
+          <div class="image">
+            <img src="./src/imgs/projects/netflixClone.png" alt="" srcset="" />
+          </div>
+          <div class="text">
+            <h3>Netflix clone</h3>
+            <div class="subtitle">A netflix ui clone, studying purposes</div>
+            <a href="#">Work in progress</a>
+          </div>
+        </div>
+        <div
+          class="project-component component notSupported"
+          onclick="handleProjectClick(4)"
+        >
+          <div class="image">
+            <img
+              src="./src/imgs/projects/whereInTheWorld.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="text">
+            <h3>WhereInTheWorld?</h3>
+            <div class="subtitle">A country info website</div>
+            <a href="https://country-info-six.vercel.app"
+              >Visit (not supported)</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./src/js/projectsSlider.js"></script>
+    <!-- Slide project info -->
   </body>
 </html>
